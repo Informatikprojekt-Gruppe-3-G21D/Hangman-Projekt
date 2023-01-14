@@ -22,6 +22,6 @@ Python:
 - [x] Learn how to change certain elements in a list and how to use the function print(*something)
 
 Progress: 
-25.11.2022: Understood GitHub
-06.01.2022: Done with programming, graphic part missing
-14.01.2022: Done with whole Game, start to revise and comment Project
+- 25.11.2022: Understood GitHub
+- 06.01.2022: Done with programming, graphic part missing
+- 14.01.2022: Done with whole Game, start to revise and comment Project
