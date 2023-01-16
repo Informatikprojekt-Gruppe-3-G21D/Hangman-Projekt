@@ -1,9 +1,9 @@
-# Library "random" importieren, um die Funktion "random" zu importieren (ansonsten nicht möglich)
+# Library "random" importieren (ansonsten kann die Funktion "random" nicht vom Computer interpretiert werden
 import random
 
 # Wörterliste (Wörter, die gesucht sein könnten) -> wird in späteren Versionen erweitert
-Wörter = ["banane"]
+Wörter = ["bananen"]
 
-# Zufälliges Wort aus der Liste wird ausgesucht und zru Kontrolle gedruckt
-GesuchtesWort = random.choice(Wörter)
+# Zufälliges Wort aus der Liste wird ausgesucht und zur Kontrolle gedruckt
+random.choice(Wörter) = GesuchtesWort
 print(GesuchtesWort)
