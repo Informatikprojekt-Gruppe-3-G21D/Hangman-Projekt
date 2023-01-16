@@ -1,4 +1,4 @@
-# Library "random" importieren (ansonsten kann die Funktion "random" nicht vom Computer interpretiert werden
+# Library "random" importieren (ansonsten kann die Funktion "random" nicht vom Computer interpretiert werden)
 import random
 
 # Wörterliste (Wörter, die gesucht sein könnten) -> wird in späteren Versionen erweitert
