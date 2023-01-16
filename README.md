@@ -15,7 +15,7 @@ Github:
 Python: 
 - [x] Find out how to select a random word out of a list
 - [x] Find out how to check, if the input of the user is in the selected word
-- [x] Learn to use the .append() function
+- [x] Learn to use the .append() and for char in ... function
 - [x] Create all the lists needed
 - [x] Find out what to include into the while loop
 - [x] Create the graphics
