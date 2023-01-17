@@ -2,7 +2,7 @@
 import random
 
 
-# Wörterliste (Wörter, die gesucht sein könnten)
+# Wörterliste (Alle Wörter, die gesucht sein könnten)
 Wörter = ["banane"]
 
 # Zufälliges Wort aus der Liste wird ausgesucht
@@ -11,7 +11,7 @@ BuchstabenListe = []
 for char in GesuchtesWort:
     BuchstabenListe.append(char)
 
-GeratenerBuchstabe = input("Rate einen Buchstaben: ") #Frage nach einer Eingabe
+GeratenerBuchstabe = input("Rate einen Buchstaben: ") #Frage nach Eingabe
 if GeratenerBuchstabe in BuchstabenListe: 
     print("richtig")
 else: 
