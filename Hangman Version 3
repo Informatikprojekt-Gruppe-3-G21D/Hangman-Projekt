@@ -25,7 +25,7 @@ while (chancen > 0):
     
     GeratenerBuchstabe = input("Rate einen Buchstaben: ") #Frage nach einer Eingabe
     
-    if  ((GeratenerBuchstabe in BuchstabenListe) and (GeratenerBuchstabe not in GerateneBuchstaben)):
+    if  ((GeratenerBuchstabe not in GerateneBuchstaben) and (GeratenerBuchstabe in BuchstabenListe)):
         print("richtig! Du darfst noch " + str(chancen) + " Fehler machen")
         GerateneBuchstaben.append(GeratenerBuchstabe)
 
