@@ -49,9 +49,9 @@ while (chancen > 0) and ("_ " in StricheFürBuchstaben):
 
     GerateneBuchstaben.append(GeratenerBuchstabe) # Erweiterung der Liste GerateneBuchstaben
 
-if chancen == 0 and ("_ " in StricheFürBuchstaben) :
+if ("_ " in StricheFürBuchstaben) and chancen == 0:
     print("Keine Chancen übrig, du hast verloren! Das gesuchte Wort war: " + str(GesuchtesWort))
    
     
 else: 
-    print ("Du hast Gewonnen! Das gesuchte Wort war " + str(GesuchtesWort))
+    print ("Du hast Gewonnen!")
