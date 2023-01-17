@@ -21,7 +21,7 @@ GerateneBuchstaben = []
 
 chancen = 6
 
-while (chancen > 0):
+while (chancen > 0): 
     
     GeratenerBuchstabe = input("Rate einen Buchstaben: ") #Frage nach einer Eingabe
     
