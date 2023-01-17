@@ -102,7 +102,7 @@ if chancen == 0 and ("_ " in StricheFürBuchstaben) :
     print(" ¦                  ¦")
     print(" ¦                  ¦")
     print(" ¦                  O")
-    print("                  -----   Du bist tot!")
+    print("                  -----   Du bist gestorben!")
     print(" ¦                 /I\\") 
     print(" ¦                  I")
     print("---                / \\")
