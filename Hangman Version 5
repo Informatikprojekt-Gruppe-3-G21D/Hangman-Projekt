@@ -77,7 +77,7 @@ while (chancen > 0) and ("_ " in StricheFürBuchstaben):
         if Darstellungszahl == 4: 
             print(" --------------------")
             print(" ¦                  ¦")
-            print(" ¦                  ¦")
+            print(" ¦                  ¦") 
             print(" ¦                  O")
             print(" ¦                 /I\\")
             print(" ¦                  I")
