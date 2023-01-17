@@ -3,7 +3,7 @@ import random
 
 # Wörterliste definieren (in späteren Versionen erweitert)
 Wörter = ["banane"]
-
+ 
 # Zufälliges Wort aus der Liste wird ausgesucht und zur Kontrolle gedruckt
 GesuchtesWort = random.choice(Wörter) 
 print(GesuchtesWort)
