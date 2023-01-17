@@ -54,4 +54,4 @@ if ("_ " in StricheFürBuchstaben) and chancen == 0:
    
     
 else: 
-    print ("Du hast Gewonnen!")
+    print ("Du hast Gewonnen! Das gesuchte Wort war " + str(GesuchtesWort))
