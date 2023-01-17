@@ -1,6 +1,6 @@
 # Library "random" importieren (sonst kann die Funktion "random" nicht vom Computer interpretiert werden)
 import random
-
+ 
 # Wörterliste definieren (in späteren Versionen erweitert)
 Wörter = ["banane"]
  
