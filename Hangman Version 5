@@ -48,9 +48,9 @@ while (chancen > 0) and ("_ " in StricheFürBuchstaben):
         #print("falsch, du darfst noch " + str(chancen) + " Fehler machen")
         Darstellungszahl = Darstellungszahl + 1
         if Darstellungszahl == 1: 
-            print("--------------------")
-            print(" ¦                  ¦")
-            print(" ¦                  ¦")
+            print("-------------------")
+            print(" ¦                 ¦")
+            print(" ¦                 ¦")
             print(" ¦")
             print(" ¦")
             print(" ¦")
