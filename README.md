@@ -9,4 +9,4 @@ We know that Github would actually have a different purpose, but the way we used
  ### Copyright
 MIT License
 <br />
-Copyright (c) [2022] [Larissa Carver]
+Copyright (c) [2022] [Larissa Carver, Michelle Koch, Sophie Germann]
