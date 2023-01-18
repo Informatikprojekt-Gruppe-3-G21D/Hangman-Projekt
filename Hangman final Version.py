@@ -1,13 +1,12 @@
 # Library "random" importieren, um ein zufälliges Wort aus der Liste auszusuchen (ansonsten nicht möglich)
 import random
+# Library "mixer" importieren, um das Abspielen von Audiodateien zu ermöglichen (Library in Pygame)
 from pygame import mixer
 
-#Instantiate mixer
+# Mixer instantiieren (Instanziierung ist der Prozess des Lesens oder Angebens von Informationen, beispielsweise des Speichertyps und der Werte für ein Datenfeld. - https://www.ibm.com)
 mixer.init()
 
-#Load audio file
-
-#Set preferred volume
+# Lautstärke der Audiodateien definieren
 mixer.music.set_volume(0.2)
 
 
@@ -34,40 +33,55 @@ print("")
 
 print("Du: Bitte, lasst mich leben! – flehst du – ich bin unschuldig, bitte lasst mich gehen! ")
 print("Henker: Nun gut, du hast eine Chance zu leben. Errätst du das von mir ausgedachte Wort mit weniger als sechs Fehlern, bleibst du am Leben. Das Spiel beginnt: ")
+
+# Darstellung jedes Buchstabens des gesuchten Wortes als "_ "
 StricheFürBuchstaben = []
 for char in BuchstabenListe: 
     StricheFürBuchstaben.append ("_ ")
     
-print(*StricheFürBuchstaben)
-Darstellungszahl = 0
-chancen = 6
+print(*StricheFürBuchstaben) # Die Striche werden abgedruckt, damit der Spieler weiss, wie viele Buchstaben das Wort hat
+Darstellungszahl = 0 # Zahl, die angibt, welche Zeichnung bei einem Fehler abgedruckt werden sollte
+chancen = 6 # Anzahl Chancen, die der Spieler zu Beginn hat
 
+
+# While-Schlaufe, solange der Spieler noch Chancen zur Verfügung hat und noch nicht alle Buchstaben erraten hat
 while (chancen > 0) and ("_ " in StricheFürBuchstaben):
     
-    GeratenerBuchstabe = input("Rate einen Buchstaben: ") #Frage nach einer Eingabe
+    GeratenerBuchstabe = input("Rate einen Buchstaben: ") #Frage nach einer Buchstabeneingabe
     
-    if  ((GeratenerBuchstabe in BuchstabenListe) and (GeratenerBuchstabe not in GerateneBuchstaben)):
+    if  ((GeratenerBuchstabe in BuchstabenListe) and (GeratenerBuchstabe not in GerateneBuchstaben)): # Wenn der geratene Buchstaben noch nicht geraten wurde und im gesuchten Wort vorhanden ist
         print("richtig! Du darfst noch " + str(chancen) + " Fehler machen")
+        
+        # Stelle(n), wo der geratene Buchstaben im gesuchten Wort vorhanden ist
         i = [index for (index, letter) in enumerate(BuchstabenListe) if letter == GeratenerBuchstabe]
+        
+        # Jene Striche in der StricheFürBuchstaben-Liste, welche für den geratenen Buchstaben stehen, werden durch diesen ersetzt
         for element in i: 
             StricheFürBuchstaben[element] = GeratenerBuchstabe
+            
+        # StricheFürBuchstaben abdrucken (mit den bereits erratenen Buchstaben)
         print (*StricheFürBuchstaben)
+        
+        # Geratener Buchstabe zur Liste aller geratenen Buchstaben hinzufügen
         GerateneBuchstaben.append(GeratenerBuchstabe)
+        
+        # Audiodatei: klatschende Menge laden und abspielen
         mixer.music.load('kultur0408.wav')
         mixer.music.play()
 
-    elif GeratenerBuchstabe in GerateneBuchstaben: 
+    elif GeratenerBuchstabe in GerateneBuchstaben: # Bereits geratene Buchstaben
         print("Du hast diesen Buchstaben schon geraten! ") # Im Falle einer wiederholten Eingabe
-        print (*StricheFürBuchstaben)
+        print (*StricheFürBuchstaben) # StricheFürBuchstaben werden erneut gedruckt
         
 
-    elif (GeratenerBuchstabe not in GerateneBuchstaben) and (GeratenerBuchstabe not in BuchstabenListe):
-        chancen = chancen - 1
-        print (*StricheFürBuchstaben)
-        #Play the music
+    elif (GeratenerBuchstabe not in GerateneBuchstaben) and (GeratenerBuchstabe not in BuchstabenListe): # Wenn der Buchstabe noch nicht geraten wurde, aber auch nicht im gesuchten Wort vorhanden ist
+        chancen = chancen - 1 # Chance wird abgezogen
+        print (*StricheFürBuchstaben) #StricheFürBuchstaben wird erneut abgedruckt
+        # Audiodatei: buhende Menge wird geladen und abgespielt
         mixer.music.load('boooo.wav')
         mixer.music.play()
         
+        #Im Fall des zweiten Elif (falscher Buchstabe, noch nicht geraten) wird die Darstellungszahl um eines erhöht und die entsprechende Darstellung abgedruckt
         Darstellungszahl = Darstellungszahl + 1
         if Darstellungszahl == 1: 
             print("--------------------")
@@ -122,10 +136,10 @@ while (chancen > 0) and ("_ " in StricheFürBuchstaben):
             print(" ¦                  I")
             print("---                / \\")
 
-
+    # Geratener Buchstabe wird zur Liste aller geratenen Buchstaben hinzugefügt
     GerateneBuchstaben.append(GeratenerBuchstabe) # Erweiterung der Liste GerateneBuchstaben
 
-if chancen == 0 and ("_ " in StricheFürBuchstaben) :
+if chancen == 0 and ("_ " in StricheFürBuchstaben) : # Wenn alle Chancen aufgebraucht sind und das gesuchte Wort nicht vollständig erraten ist:
     print("Keine Chancen übrig, du hast verloren! ")
     print(" --------------------")
     print(" ¦                  ¦")
@@ -136,5 +150,5 @@ if chancen == 0 and ("_ " in StricheFürBuchstaben) :
     print(" ¦                  I")
     print("---                / \\")
     
-else: 
+else: # Wenn keine Striche mehr in der BuchstabenListe voranden sind (also alle Buchstaben erraten sind) -> Ausgabe: Du hast gewonnen. Das gesuchte Wort war z. B. Banane
     print ("Du hast Gewonnen! Das gesuchte Wort war " + str(GesuchtesWort))
