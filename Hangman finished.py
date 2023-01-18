@@ -109,3 +109,6 @@ if chancen == 0 and ("_ " in StricheFürBuchstaben) :
     
 else: 
     print ("Du hast Gewonnen! Das gesuchte Wort war " + str(GesuchtesWort))
+
+    
+# MIT License: Copyright (c) [2022] [Larissa Carver, Michelle Koch, Sophie Germann]
