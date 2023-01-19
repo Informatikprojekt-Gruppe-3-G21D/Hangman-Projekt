@@ -8,12 +8,12 @@ Python is an ideal programming language to write small projects with. Neverthele
 - Open the folder in an interpreter (f.e. VS Code) and run the file "Hangman final Version.py"
 Now you should be able to play Hangman!
 
-Credits:
-The audios are from: https://user-images.githubusercontent.com/97455290/213513949-b2a31452-8954-4886-bfcd-fed7c0b1b706.png
+### Credits:
+The audios are from: https://findsounds.com/ <br />
+We do not have any rights concerning the audios
 
  
- 
- ### Copyright
+### Copyright
 MIT License
 <br />
-Copyright (c) [2022] [Larissa Carver, Michelle Koch, Sophie Germann]
+Copyright (c) [2022] <br />[Larissa Carver, Michelle Koch, Sophie Germann]
