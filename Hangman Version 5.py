@@ -9,7 +9,7 @@ Wörter = ["banane", "endoplasmatisch", "velostaender", "kakteen", "pausenbrot",
 GesuchtesWort = random.choice(Wörter) 
 
 
-# Buchstabenliste wird mit den Buchstaben des gesuchten Wortes Erweitert
+# Buchstabenliste wird mit den Buchstaben des gesuchten Wortes Erweitert  
 BuchstabenListe = []
 GesuchtesWort = str(GesuchtesWort)
 for char in GesuchtesWort:
