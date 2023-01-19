@@ -6,7 +6,7 @@ Wörter = ["banane"]
  
 # Zufälliges Wort aus der Liste wird ausgesucht und zur Kontrolle gedruckt  
 GesuchtesWort = random.choice(Wörter) 
-print(GesuchtesWort)
+print(GesuchtesWort) 
 
 
 # MIT License: Copyright (c) [2022] [Larissa Carver, Michelle Koch, Sophie Germann]
