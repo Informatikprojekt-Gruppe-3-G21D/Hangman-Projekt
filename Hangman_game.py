@@ -1,9 +1,11 @@
 # Library "random" importieren, um ein zufälliges Wort aus der Liste auszusuchen (ansonsten nicht möglich)
 import random
+
 # Library "mixer" importieren, um das Abspielen von Audiodateien zu ermöglichen (Library in Pygame)
 from pygame import mixer
+
 # Library sleep, damit die letzten zwei Audios funktionieren (ansonsten bricht das Programm ab, bevor die Audios abgespielt werden können)
-from time import sleep
+from time import sleep # Hilfe vom Lehrer für diese Zeile
 
 # Mixer instantiieren 
 mixer.init()
@@ -13,7 +15,7 @@ mixer.music.set_volume(0.2)
 
 
 # Wörterliste (Wörter, die gesucht sein könnten)
-Wörter = ["banane", "endoplasmatisch", "velostaender", "kakteen", "pausenbrot", "kaffeetasse", "liegestuhl", "xylophon", "teddybaer", "informatik", "fernseher", "millionaer", "wassertropfen", "nahrung", "lauch", "gurke", "zyklop", "rhythmus", "kaulquappe", "fischteich"]
+Wörter = ["banane", "lauch", "endoplasmatisch", "liegestuhl", "fischteich", "haushalt", "gitarre", "mikrophon", "zebra", "rucksack", "ukulele", "papier", "stundenplan"]
 
 # Zufälliges Wort aus der Liste wird ausgesucht
 GesuchtesWort = random.choice(Wörter)
@@ -22,7 +24,7 @@ GesuchtesWort = random.choice(Wörter)
 # Buchstabenliste wird mit den Buchstaben des gesuchten Wortes Erweitert (als Liste, jeder Buchstabe ist ein einzelnes Element)
 BuchstabenListe = []
 GesuchtesWort = str(GesuchtesWort)
-for char in GesuchtesWort:
+for char in GesuchtesWort: # Für diese und folgende Zeile: ein wenig Hilfe von Simon Renggli (Schüler KSS, G21C)
     BuchstabenListe.append(char)
 
 # Definition GerateneBuchstaben-Liste
@@ -161,17 +163,32 @@ if chancen == 0 and ("_ " in StricheFürBuchstaben) : # Wenn alle Chancen aufgeb
     mixer.music.load('crowd laughing.wav')
     mixer.music.play()
     # Programm schaltet erst in 10 Sekunden ab, damit die Audiospur noch abgespielt wird
-    sleep(10)
+    sleep(10) # Hilfe vom Lehrer für diese Zeile
 
+    
+    
+    
 else: # Wenn keine Striche mehr in der BuchstabenListe voranden sind (also alle Buchstaben erraten sind) -> Ausgabe: Du hast gewonnen. Das gesuchte Wort war z. B. Banane
     print ("Du hast Gewonnen! Das gesuchte Wort war " + str(GesuchtesWort))
+    print("--------------------")
+    print(" ¦")
+    print(" ¦")
+    print(" ¦                 O")
+    print(" ¦                \\I/")
+    print(" ¦                 I")
+    print("--                / \\")
+    print("Du lebst! Herzlichen Glückwunsch! ")
+
+    
 
     # Audio laden und abspielen
     mixer.music.load('crowd cheering.wav')
     mixer.music.play()
 
     # Programm schaltet erst in 10 Sekunden ab, damit die Audiospur noch abgespielt wird
-    sleep(10)
+    sleep(10) # Hilfe vom Lehrer für diese Zeile
+    
+
    
     
 # MIT License
