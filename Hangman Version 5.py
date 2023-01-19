@@ -8,7 +8,7 @@ Wörter = ["banane", "endoplasmatisch", "velostaender", "kakteen", "pausenbrot",
 # Zufälliges Wort aus der Liste wird ausgesucht  
 GesuchtesWort = random.choice(Wörter) 
 
-
+  
 # Buchstabenliste wird mit den Buchstaben des gesuchten Wortes Erweitert  
 BuchstabenListe = []
 GesuchtesWort = str(GesuchtesWort)
