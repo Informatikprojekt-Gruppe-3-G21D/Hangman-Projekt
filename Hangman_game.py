@@ -51,9 +51,9 @@ chancen = 6 # Anzahl Chancen, die der Spieler zu Beginn hat
 # While-Schlaufe, solange der Spieler noch Chancen zur Verfügung hat und noch nicht alle Buchstaben erraten hat
 while (chancen > 0) and ("_ " in StricheFürBuchstaben):
     
-    GeratenerBuchstabe = input("Rate einen Buchstaben: ") #Frage nach einer Buchstabeneingabe
-    
-    if  ((GeratenerBuchstabe in BuchstabenListe) and (GeratenerBuchstabe not in GerateneBuchstaben)): # Wenn der geratene Buchstaben noch nicht geraten wurde und im gesuchten Wort vorhanden ist
+    GeratenerBuchstabe = input("Rate einen Buchstaben (bitte klein schreiben): ") #Frage nach einer Buchstabeneingabe
+
+    if((GeratenerBuchstabe in BuchstabenListe) and (GeratenerBuchstabe not in GerateneBuchstaben)): # Wenn der geratene Buchstaben noch nicht geraten wurde und im gesuchten Wort vorhanden ist
         print("richtig! Du darfst noch " + str(chancen) + " Fehler machen")
         
         # Stelle(n), wo der geratene Buchstaben im gesuchten Wort vorhanden ist
@@ -163,9 +163,6 @@ if chancen == 0 and ("_ " in StricheFürBuchstaben) : # Wenn alle Chancen aufgeb
     # Programm schaltet erst in 10 Sekunden ab, damit die Audiospur noch abgespielt wird
     sleep(10)
 
-    
-    
-    
 else: # Wenn keine Striche mehr in der BuchstabenListe voranden sind (also alle Buchstaben erraten sind) -> Ausgabe: Du hast gewonnen. Das gesuchte Wort war z. B. Banane
     print ("Du hast Gewonnen! Das gesuchte Wort war " + str(GesuchtesWort))
 
@@ -175,6 +172,7 @@ else: # Wenn keine Striche mehr in der BuchstabenListe voranden sind (also alle 
 
     # Programm schaltet erst in 10 Sekunden ab, damit die Audiospur noch abgespielt wird
     sleep(10)
+   
     
 # MIT License
 # Copyright (c) [2022]
