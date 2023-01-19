@@ -1,6 +1,6 @@
 # Library "random" importieren, um ein zufälliges Wort aus der Liste auszusuchen (ansonsten nicht möglich)
 import random
-from pygame import mixer
+from pygame import mixer 
 
 #Instantiate mixer
 mixer.init()
