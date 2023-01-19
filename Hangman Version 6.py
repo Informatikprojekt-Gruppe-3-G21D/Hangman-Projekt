@@ -5,7 +5,7 @@ from pygame import mixer
 #Instantiate mixer
 mixer.init()
 
-#Load audio file  
+#Load audio file   
 
 #Set preferred volume
 mixer.music.set_volume(0.2)
