@@ -5,8 +5,7 @@ Python is an ideal programming language to write small projects with. Neverthele
 ### Requirements for usage: 
 - Download all pygame libraries (https://www.pygame.org/download.shtml)
 - Download all the files listed in our repository and move them to the same folder
-- Open the "Hangman final Version.py" file in an interpreter (f. e. VSCode)
-
+- Open the folder in an interpreter (f.e. VS Code) and run the file "Hangman final Version.py"
 Now you should be able to play Hangman!
  
  
