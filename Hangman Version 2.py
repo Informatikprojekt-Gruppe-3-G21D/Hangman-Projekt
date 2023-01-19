@@ -17,4 +17,4 @@ if GeratenerBuchstabe in BuchstabenListe:
 else: 
     print("falsch")
     
-# MIT License: Copyright (c) [2022] [Larissa Carver, Michelle Koch, Sophie Germann]
+# MIT License: Copyright (c) [2022] [Larissa Carver, Michelle Koch, Sophie Germann] 
