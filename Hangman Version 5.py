@@ -4,7 +4,7 @@ import random
 
 # Wörterliste (Wörter, die gesucht sein könnten) 
 Wörter = ["banane", "endoplasmatisch", "velostaender", "kakteen", "pausenbrot", "kaffeetasse", "liegestuhl", "xylophon", "teddybaer", "informatik", "fernseher", "millionaer", "wassertropfen", "nahrung", "lauch", "gurke", "zyklop", "rhythmus", "kaulquappe", "fischteich"]
-
+ 
 # Zufälliges Wort aus der Liste wird ausgesucht  
 GesuchtesWort = random.choice(Wörter) 
 
