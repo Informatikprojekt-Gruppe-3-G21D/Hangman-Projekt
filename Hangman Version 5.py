@@ -13,7 +13,7 @@ GesuchtesWort = random.choice(Wörter)
 BuchstabenListe = []
 GesuchtesWort = str(GesuchtesWort)
 for char in GesuchtesWort: 
-    BuchstabenListe.append(char)
+    BuchstabenListe.append(char) 
 
 GerateneBuchstaben = []
 
