@@ -2,9 +2,10 @@
 import random
 # Library "mixer" importieren, um das Abspielen von Audiodateien zu ermöglichen (Library in Pygame)
 from pygame import mixer
+# Library sleep, damit die letzten zwei Audios funktionieren (ansonsten bricht das Programm ab, bevor die Audios abgespielt werden können)
 from time import sleep
 
-# Mixer instantiieren (Instanziierung ist der Prozess des Lesens oder Angebens von Informationen, beispielsweise des Speichertyps und der Werte für ein Datenfeld. - https://www.ibm.com)
+# Mixer instantiieren 
 mixer.init()
 
 # Lautstärke der Audiodateien definieren
@@ -24,10 +25,12 @@ GesuchtesWort = str(GesuchtesWort)
 for char in GesuchtesWort:
     BuchstabenListe.append(char)
 
+# Definition GerateneBuchstaben-Liste
 GerateneBuchstaben = []
 
-# Start des visuellen Teils der Grafik: 
 
+# Start des visuellen Teils der Grafik: 
+# Storyline
 print("Du stehst auf dem Marktplatz, die Menschenmasse drängt sich um dich und den dir drohenden Galgen. Sie werfen Tomaten und faule Eier auf    dich, fluchen und spucken.")
 print("Du fürchstest dich, hast mit deinem Leben bereits abgeschlossen. Doch nein, das darf nicht sein. Du bist unschuldig, warst zur falschen    Zeit am falschen Ort! Deine Willenskraft kehrt zurück: ")
 print("")
@@ -60,7 +63,7 @@ while (chancen > 0) and ("_ " in StricheFürBuchstaben):
         for element in i: 
             StricheFürBuchstaben[element] = GeratenerBuchstabe
             
-        # StricheFürBuchstaben abdrucken (mit den bereits erratenen Buchstaben)
+        # StricheFürBuchstaben ohne Klammern und Kommas (dafür das *) abdrucken (mit den bereits erratenen Buchstaben)
         print (*StricheFürBuchstaben)
         
         # Geratener Buchstabe zur Liste aller geratenen Buchstaben hinzufügen
@@ -70,14 +73,15 @@ while (chancen > 0) and ("_ " in StricheFürBuchstaben):
         mixer.music.load('crowd cheering.wav')
         mixer.music.play()
 
-    elif GeratenerBuchstabe in GerateneBuchstaben: # Bereits geratene Buchstaben
-        print("Du hast diesen Buchstaben schon geraten! ") # Im Falle einer wiederholten Eingabe
+    elif GeratenerBuchstabe in GerateneBuchstaben: # Bereits geratene Buchstaben -> Wiederholte Eingabe
+        print("Du hast diesen Buchstaben schon geraten! ") 
         print (*StricheFürBuchstaben) # StricheFürBuchstaben werden erneut gedruckt
         
 
     elif (GeratenerBuchstabe not in GerateneBuchstaben) and (GeratenerBuchstabe not in BuchstabenListe): # Wenn der Buchstabe noch nicht geraten wurde, aber auch nicht im gesuchten Wort vorhanden ist
         chancen = chancen - 1 # Chance wird abgezogen
         print (*StricheFürBuchstaben) #StricheFürBuchstaben wird erneut abgedruckt
+
         # Audiodatei: buhende Menge wird geladen und abgespielt
         mixer.music.load('crowd booing.wav')
         mixer.music.play()
@@ -140,7 +144,7 @@ while (chancen > 0) and ("_ " in StricheFürBuchstaben):
             
 
     # Geratener Buchstabe wird zur Liste aller geratenen Buchstaben hinzugefügt
-    GerateneBuchstaben.append(GeratenerBuchstabe) # Erweiterung der Liste GerateneBuchstaben
+    GerateneBuchstaben.append(GeratenerBuchstabe) 
 
 if chancen == 0 and ("_ " in StricheFürBuchstaben) : # Wenn alle Chancen aufgebraucht sind und das gesuchte Wort nicht vollständig erraten ist:
     print("Keine Chancen übrig, du hast verloren! ")
@@ -152,27 +156,23 @@ if chancen == 0 and ("_ " in StricheFürBuchstaben) : # Wenn alle Chancen aufgeb
     print(" ¦                 /I\\") 
     print(" ¦                  I")
     print("---                / \\")
-    mixer.init()
 
-    # Lautstärke der Audiodateien definieren
-    mixer.music.set_volume(0.2)
+    # Audio laden und abspielen
     mixer.music.load('crowd laughing.wav')
     mixer.music.play()
+    # Programm schaltet erst in 10 Sekunden ab, damit die Audiospur noch abgespielt wird
     sleep(10)
 
     
     
     
 else: # Wenn keine Striche mehr in der BuchstabenListe voranden sind (also alle Buchstaben erraten sind) -> Ausgabe: Du hast gewonnen. Das gesuchte Wort war z. B. Banane
-    # Mixer instantiieren (Instanziierung ist der Prozess des Lesens oder Angebens von Informationen, beispielsweise des Speichertyps und der Werte für ein Datenfeld. - https://www.ibm.com)
-    mixer.init()
-
-    # Lautstärke der Audiodateien definieren
-    mixer.music.set_volume(0.2)
     print ("Du hast Gewonnen! Das gesuchte Wort war " + str(GesuchtesWort))
+
+    # Audio laden und abspielen
     mixer.music.load('crowd cheering.wav')
     mixer.music.play()
+
+    # Programm schaltet erst in 10 Sekunden ab, damit die Audiospur noch abgespielt wird
     sleep(10)
-    
-    # Copyright (c) [2022] [Michelle Koch, Sophie Germann, Larissa Carver]
     
