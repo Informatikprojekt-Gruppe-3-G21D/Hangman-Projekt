@@ -9,4 +9,4 @@ GesuchtesWort = random.choice(Wörter)
 print(GesuchtesWort) 
 
 
-# MIT License: Copyright (c) [2022] [Larissa Carver, Michelle Koch, Sophie Germann]
+# MIT License: Copyright (c) [2022] [Larissa Carver, Michelle Koch, Sophie Germann] 
