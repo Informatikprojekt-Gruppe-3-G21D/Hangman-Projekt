@@ -174,3 +174,5 @@ else: # Wenn keine Striche mehr in der BuchstabenListe voranden sind (also alle 
     mixer.music.play()
     sleep(10)
     
+    # Copyright (c) [2022] [Michelle Koch, Sophie Germann, Larissa Carver]
+    
