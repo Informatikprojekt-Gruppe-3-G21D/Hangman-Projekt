@@ -101,7 +101,7 @@ while (chancen > 0) and ("_ " in StricheFürBuchstaben):
             print("---                / \\")
 
 
-    GerateneBuchstaben.append(GeratenerBuchstabe) # Erweiterung der Liste GerateneBuchstaben
+    GerateneBuchstaben.append(GeratenerBuchstabe) # Erweiterung der Liste GerateneBuchstaben   
 
 if chancen == 0 and ("_ " in StricheFürBuchstaben) :
     print("Keine Chancen übrig, du hast verloren! ")
