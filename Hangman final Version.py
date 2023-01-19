@@ -2,6 +2,7 @@
 import random
 # Library "mixer" importieren, um das Abspielen von Audiodateien zu ermöglichen (Library in Pygame)
 from pygame import mixer
+from time import sleep
 
 # Mixer instantiieren (Instanziierung ist der Prozess des Lesens oder Angebens von Informationen, beispielsweise des Speichertyps und der Werte für ein Datenfeld. - https://www.ibm.com)
 mixer.init()
@@ -28,7 +29,7 @@ GerateneBuchstaben = []
 # Start des visuellen Teils der Grafik: 
 
 print("Du stehst auf dem Marktplatz, die Menschenmasse drängt sich um dich und den dir drohenden Galgen. Sie werfen Tomaten und faule Eier auf    dich, fluchen und spucken.")
-print("Du fürchstest dich, hast mit deinem Leben bereits abgeschlossen. Doch nein, das darf nicht sein. Du bist        unschuldig, warst zur falschen Zeit am falschen Ort! Deine Willenskraft kehrt zurück: ")
+print("Du fürchstest dich, hast mit deinem Leben bereits abgeschlossen. Doch nein, das darf nicht sein. Du bist unschuldig, warst zur falschen    Zeit am falschen Ort! Deine Willenskraft kehrt zurück: ")
 print("")
 
 print("Du: Bitte, lasst mich leben! – flehst du – ich bin unschuldig, bitte lasst mich gehen! ")
@@ -66,7 +67,7 @@ while (chancen > 0) and ("_ " in StricheFürBuchstaben):
         GerateneBuchstaben.append(GeratenerBuchstabe)
         
         # Audiodatei: klatschende Menge laden und abspielen
-        mixer.music.load('kultur0408.wav')
+        mixer.music.load('crowd cheering.wav')
         mixer.music.play()
 
     elif GeratenerBuchstabe in GerateneBuchstaben: # Bereits geratene Buchstaben
@@ -78,7 +79,7 @@ while (chancen > 0) and ("_ " in StricheFürBuchstaben):
         chancen = chancen - 1 # Chance wird abgezogen
         print (*StricheFürBuchstaben) #StricheFürBuchstaben wird erneut abgedruckt
         # Audiodatei: buhende Menge wird geladen und abgespielt
-        mixer.music.load('boooo.wav')
+        mixer.music.load('crowd booing.wav')
         mixer.music.play()
         
         #Im Fall des zweiten Elif (falscher Buchstabe, noch nicht geraten) wird die Darstellungszahl um eines erhöht und die entsprechende Darstellung abgedruckt
@@ -135,6 +136,8 @@ while (chancen > 0) and ("_ " in StricheFürBuchstaben):
             print(" ¦                 /I\\") 
             print(" ¦                  I")
             print("---                / \\")
+            
+            
 
     # Geratener Buchstabe wird zur Liste aller geratenen Buchstaben hinzugefügt
     GerateneBuchstaben.append(GeratenerBuchstabe) # Erweiterung der Liste GerateneBuchstaben
@@ -149,6 +152,25 @@ if chancen == 0 and ("_ " in StricheFürBuchstaben) : # Wenn alle Chancen aufgeb
     print(" ¦                 /I\\") 
     print(" ¦                  I")
     print("---                / \\")
+    mixer.init()
+
+    # Lautstärke der Audiodateien definieren
+    mixer.music.set_volume(0.2)
+    mixer.music.load('crowd laughing.wav')
+    mixer.music.play()
+    sleep(10)
+
+    
+    
     
 else: # Wenn keine Striche mehr in der BuchstabenListe voranden sind (also alle Buchstaben erraten sind) -> Ausgabe: Du hast gewonnen. Das gesuchte Wort war z. B. Banane
+    # Mixer instantiieren (Instanziierung ist der Prozess des Lesens oder Angebens von Informationen, beispielsweise des Speichertyps und der Werte für ein Datenfeld. - https://www.ibm.com)
+    mixer.init()
+
+    # Lautstärke der Audiodateien definieren
+    mixer.music.set_volume(0.2)
     print ("Du hast Gewonnen! Das gesuchte Wort war " + str(GesuchtesWort))
+    mixer.music.load('crowd cheering.wav')
+    mixer.music.play()
+    sleep(10)
+    
