@@ -26,7 +26,7 @@ for char in GesuchtesWort:
 
 GerateneBuchstaben = []
 
-# Start des visuellen Teils der Grafik: 
+# Start des visuellen Teils der Grafik:   
 
 print("Du stehst auf dem Marktplatz, die Menschenmasse drängt sich um dich und den dir drohenden Galgen. Sie werfen Tomaten und faule Eier auf    dich, fluchen und spucken.")
 print("Du fürchstest dich, hast mit deinem Leben bereits abgeschlossen. Doch nein, das darf nicht sein. Du bist        unschuldig, warst zur falschen Zeit am falschen Ort! Deine Willenskraft kehrt zurück: ")
