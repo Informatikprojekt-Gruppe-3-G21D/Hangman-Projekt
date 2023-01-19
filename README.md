@@ -20,4 +20,4 @@ We do not have any rights concerning the audios
 ### Copyright
 MIT License
 <br />
-Copyright (c) [2022] <br />[Larissa Carver, Michelle Koch, Sophie Germann]
+Copyright (c) [2022] <br />[Michelle Koch, Sophie Germann, Larissa Carver]
