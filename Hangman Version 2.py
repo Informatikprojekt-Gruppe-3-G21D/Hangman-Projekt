@@ -1,5 +1,5 @@
 # Library "random" importieren, um ein zufälliges Wort aus der Liste auszusuchen (sonst nicht möglich)
-import random
+import random 
 
 
 # Wörterliste (Alle Wörter, die gesucht sein könnten)
