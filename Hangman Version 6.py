@@ -137,4 +137,4 @@ if chancen == 0 and ("_ " in StricheFürBuchstaben) :
     print("---                / \\")
     
 else: 
-    print ("Du hast Gewonnen! Das gesuchte Wort war " + str(GesuchtesWort))
+    print ("Du hast Gewonnen! Das gesuchte Wort war " + str(GesuchtesWort)) 
