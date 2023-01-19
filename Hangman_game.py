@@ -176,3 +176,6 @@ else: # Wenn keine Striche mehr in der BuchstabenListe voranden sind (also alle 
     # Programm schaltet erst in 10 Sekunden ab, damit die Audiospur noch abgespielt wird
     sleep(10)
     
+# MIT License
+# Copyright (c) [2022]
+# [Michelle Koch, Sophie Germann, Larissa Carver]
