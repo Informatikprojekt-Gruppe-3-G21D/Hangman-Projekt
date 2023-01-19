@@ -12,7 +12,7 @@ GesuchtesWort = random.choice(Wörter)
 # Buchstabenliste wird mit den Buchstaben des gesuchten Wortes Erweitert  
 BuchstabenListe = []
 GesuchtesWort = str(GesuchtesWort)
-for char in GesuchtesWort:
+for char in GesuchtesWort: 
     BuchstabenListe.append(char)
 
 GerateneBuchstaben = []
